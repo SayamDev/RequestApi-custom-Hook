@@ -7,3 +7,7 @@
 
 
 ![image](https://user-images.githubusercontent.com/101875083/173254517-29e57abf-5ec1-4799-816e-a4e74014b4fb.png)
+
+
+
+Remember there are 3 lifecycles of Component : Mount, Update, unMount
