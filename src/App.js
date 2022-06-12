@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import "./App.css";
 
 function App() {
+  const [joke, setJoke] = useState('')
+  useEffect(() => {
+    const fetchJoke = async () =>
+      await fetch(
+        `http://api.icndb.com/jokes/random?firstName=Sayam&lastName=Ajmal/`
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          setJoke(data.value.joke)
+        });
+    fetchJoke();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <center>
+        <h1>The Joke Generator</h1>
+        <h2>{joke}</h2>
+        <button>Generate Joke</button>
+      </center>
     </div>
   );
 }
 
 export default App;
+
+// http://api.icndb.com/jokes/random
