@@ -1,20 +1,13 @@
-import { useState, useEffect } from "react";
 import "./App.css";
+import useRandomJoke from "./useRandomJoke";
 
 function App() {
-  const [joke, setJoke] = useState('')
-  useEffect(() => {
-    const fetchJoke = async () =>
-      await fetch(
-        `http://api.icndb.com/jokes/random?firstName=Sayam&lastName=Ajmal/`
-      )
-        .then((res) => res.json())
-        .then((data) => {
-          setJoke(data.value.joke)
-        });
-    fetchJoke();
-  }, []);
+  const joke = useRandomJoke();
 
+  //custom hook
+  //const joke = useRandomJoke("sayam", "ajmal");
+
+  
   return (
     <div>
       <center>
@@ -29,3 +22,6 @@ function App() {
 export default App;
 
 // http://api.icndb.com/jokes/random
+
+
+//8:39
