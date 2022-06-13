@@ -2,7 +2,7 @@ import "./App.css";
 import useRandomJoke from "./useRandomJoke";
 
 function App() {
-  const joke = useRandomJoke();
+  const joke = useRandomJoke("amad", "butt");
 
   //custom hook
   //const joke = useRandomJoke("sayam", "ajmal");
