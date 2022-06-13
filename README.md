@@ -26,3 +26,12 @@ Remember there are 3 lifecycles of Component : Mount, Update, unMount
 
 
 ![image](https://user-images.githubusercontent.com/101875083/173308904-fcf57f99-4bac-4dc0-bc2c-5ae3122e7946.png)
+
+
+
+
+![image](https://user-images.githubusercontent.com/101875083/173312401-7aad68d8-7099-447c-8c05-03807a8d3408.png)
+
+
+
+![image](https://user-images.githubusercontent.com/101875083/173312521-b829add1-e8ed-4fff-9229-b2b67f71bcce.png)
